@@ -325,36 +325,181 @@ span {
     box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF;
 }
 
-.contenue-des-bar {
+.progress-circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  
+  svg {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
+  
+  circle {
+    fill: transparent;
+    stroke-width: 5;
+    transform: translate(5px, 5px);
+  }
+  
+  .progress-circle__bg {
+    stroke: #e6e6e6;
+  }
+  
+  .progress-circle__fill {
+    stroke: #4CAF50;
+    stroke-dasharray: 0, 100;
+    transition: stroke-dasharray 1s;
+  }
+  
+  .progress-circle__label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .skills {
+    background: var(--kopp-color);
+  }
+
+  .skill-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+  }
+
+  .skill-bar {
+    margin-bottom: 2.3rem;
+    font-size: 18px;
+  }
+
+  .main-text {
+    font-size: 18px;
+  }
+
+  .skill-main h3 {
+    margin-bottom: 2rem;
+    font-size: var(--normal-font);
+    text-align: center;
+  }
+
+  .skill-left .skill-bar .info {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
 
-.bar {
-    height: 30px;
-    background-color: red;
-    border-radius: 20px;
-    box-shadow: inset 6px 6px 6px #D9DADE, inset -6px -6px 6px #FFFFFF;
-}
+  .skill-left .skill-bar .bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--bg-color);
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+  }
 
-.bar .progression {
+  .skill-bar .bar .html {
+    width: 72%;
+    animation: html 2s;
+    background-color: #13f8fe;
     height: 100%;
-    background-color: red;
-    border-radius: 20px
-}
+    border-radius: 25px;
+  }
 
-.bar:nth-child(1) .progression {
-   width: 80%;
-}
-
-.bar:nth-child(2) .progression {
+  .skill-bar .bar .css {
     width: 60%;
-}
+    animation: css 5s;
+    background-color: #13f8fe;
+    height: 100%;
+    border-radius: 25px;
+  }
+  
+  .skill-bar .bar .javascript {
+    width: 20%;
+    animation: javascript 4s;
+    background-color: #13f8fe;
+    height: 100%;
+    border-radius: 25px;
+  }
 
-.bar:nth-child(3) .progression {
-    width: 10%;
-}
+  .skill-bar .bar .figma {
+    width: 90%;
+    animation: figma 3s;
+    background-color: #13f8fe;
+    height: 100%;
+    border-radius: 25px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 72%;
+    }
+  }
+
+  @keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+  }
+
+  @keyframes javascript {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 20%;
+    }
+  }
+
+  @keyframes figma {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+  }
+
 
 
 
