@@ -420,7 +420,7 @@ span {
   }
   
   .skill-bar .bar .javascript {
-    width: 20%;
+    width: 10%;
     animation: javascript 4s;
     background-color: #13f8fe;
     height: 100%;
